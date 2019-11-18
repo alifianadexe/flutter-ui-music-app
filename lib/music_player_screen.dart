@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -45,4 +46,43 @@ class _MusicPlayerScreen extends State<MusicPlayerScreen> {
       ),
     );
   }
+
+  Widget _buildWidgetContainerMusicPlayer(MediaQueryData mediaQueryData){
+    return Padding(
+      padding: EdgeInsets.only(
+        top: mediaQueryData.padding.top + 16.0),
+      child: Column(
+          children: <Widget>[
+            
+        ],),
+    );
+  }
+
+  Widget _buildWidgetActionAppBar(){
+    return Padding(
+      padding : const EdgeInsets.symmetric(horizontal: 16.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          GestureDetector(
+            onTap: (){
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Platform.isIOS ? Icons.arrow_back_ios : Icons.arrow_back,
+              color: Colors.white
+            ),
+          ),
+          Text(
+            'Artist',
+            style: ,
+          ),
+          Icon(
+
+          )
+        ],
+      ),
+    )
+  }
+
 }
